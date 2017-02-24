@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>ChannelAdam.Nancy.Hosting.Self</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <title>ChannelAdam Nancy Self Hosting Library</title>
     <authors>Adam Craven</authors>
     <owners>Adam Craven</owners>
@@ -12,9 +12,10 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>A library of helpers for self hosting the Nancy web framework.</description>
     <releaseNotes>
+1.1.0 - Target .NET 4.0 instead of 4.0.3
 1.0.0 - Initial release.
     </releaseNotes>
-    <copyright>Copyright 2016 Adam Craven</copyright>
+    <copyright>Copyright 2016-2017 Adam Craven</copyright>
     <tags>Nancy, Self Hosting, Self, Hosting, Helper</tags>
     <dependencies>
       <dependency id="Nancy.Hosting.Self" version="1.4.1" />
