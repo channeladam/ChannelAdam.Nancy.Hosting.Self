@@ -6,7 +6,7 @@
     <Authors>Adam Craven</Authors>
     <Company>Adam Craven</Company>
     <Product>ChannelAdam.Nancy.Hosting.Self</Product>
-    <Description>A .NET library providing helpers for self hosting the Nancy web framework.</Description>
+    <Description>DEPRECATED - A .NET library providing helpers for self hosting the Nancy web framework.</Description>
     <Copyright>Copyright 2016-2021 Adam Craven</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>    
     <PackageProjectUrl>https://github.com/channeladam/ChannelAdam.Nancy.Hosting.Self</PackageProjectUrl>
@@ -15,6 +15,7 @@
     <PackageIconUrl>https://devzone.channeladam.com/img/channeladam/channeladam-logo.png</PackageIconUrl>
     <PackageTags>Nancy, Self Hosting, Self, Hosting, Helper</PackageTags>
     <PackageReleaseNotes>
+3.0.1 - DEPRECATED - Nancy is no longer maintained.
 3.0.0 - Multitarget .NET Standard 2.0 and .NET 5.0, enabled nullable reference types, upgrade to Nancy v2.0.0.
 2.0.0 - Target .NET Standard 2.0 only.
 1.1.0 - Target .NET 4.0 instead of 4.0.3.
