@@ -1,25 +1,48 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Description>A .NET Standard 2.0 library providing helpers for self hosting the Nancy web framework.</Description>
+    <TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>
     <Version>0.0.0</Version>
     <Authors>Adam Craven</Authors>
-    <Copyright>Copyright 2016-2018 Adam Craven</Copyright>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <Company>Adam Craven</Company>
+    <Product>ChannelAdam.Nancy.Hosting.Self</Product>
+    <Description>A .NET library providing helpers for self hosting the Nancy web framework.</Description>
+    <Copyright>Copyright 2016-2021 Adam Craven</Copyright>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>    
     <PackageProjectUrl>https://github.com/channeladam/ChannelAdam.Nancy.Hosting.Self</PackageProjectUrl>
     <RepositoryUrl>https://github.com/channeladam/ChannelAdam.Nancy.Hosting.Self</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageIconUrl>https://devzone.channeladam.com/img/channeladam/channeladam-logo.png</PackageIconUrl>
     <PackageTags>Nancy, Self Hosting, Self, Hosting, Helper</PackageTags>
-    <PackageReleaseNotes>2.0.0 - Target .NET Standard 2.0 only
-1.1.0 - Target .NET 4.0 instead of 4.0.3
+    <PackageReleaseNotes>
+3.0.0 - Multitarget .NET Standard 2.0 and .NET 5.0, enabled nullable reference types, upgrade to Nancy v2.0.0.
+2.0.0 - Target .NET Standard 2.0 only.
+1.1.0 - Target .NET 4.0 instead of 4.0.3.
 1.0.0 - Initial release.
-</PackageReleaseNotes>
+    </PackageReleaseNotes>
+    <IsPackable>true</IsPackable>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSource>true</IncludeSource>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>CS8600;CS8602;CS8603</WarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" $(Nullable) != 'enable' ">
+    <NoWarn>$(NoWarn);CS8632</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nancy.Hosting.Self" Version="1.4.1" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Nancy" Version="2.0.0" />
+    <PackageReference Include="Nancy.Hosting.Self" Version="2.0.0" />
   </ItemGroup>
 
 </Project>
